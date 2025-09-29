@@ -48,7 +48,7 @@ public class MainActivity extends Activity {
 
         // Title
         TextView title = new TextView(this);
-        title.setText("📁 WebDAV File Viewer");
+        title.setText("📁 WebDav File Viewer");
         title.setTextSize(TypedValue.COMPLEX_UNIT_SP, 28);
         title.setTextColor(Color.parseColor("#00ff88"));
         title.setTypeface(null, Typeface.BOLD);
