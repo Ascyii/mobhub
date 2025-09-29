@@ -1,0 +1,14 @@
+plugins { id 'com.android.application' }
+
+repositories {
+	google()
+}
+
+android {
+	namespace "de.ascyii.mobhub"
+	compileSdkVersion 34
+	defaultConfig {
+		targetSdk 34
+		versionCode 1
+	}
+}

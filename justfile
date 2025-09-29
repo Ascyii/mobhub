@@ -7,10 +7,15 @@ activity := ".MainActivity"
 export ANDROID_HOME := "/home/jonas/Android"
 
 build:
-    @echo "Installing onto device"
-    gradle installDebug
-    adb shell am start -n {{package}}/{{activity}}
+	gradle assembleDebug
+
+push:
+	gradle installDebug
+	adb shell am start -n {{package}}/{{activity}}
 
 setup:
 	sdkmanager --install "platform-tools" "platforms;android-34"
 	sdkmanager --licenses
+
+clean:
+	rm -rf build
