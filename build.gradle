@@ -4,20 +4,17 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.5.0'
+        classpath 'com.android.tools.build:gradle:8.7.3'
     }
 }
 
-repositories {
-    google()
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
 }
 
-apply plugin: 'com.android.application'
-
-android {
-    namespace "de.ascyii.mobhub"
-    compileSdkVersion 34
-    defaultConfig {
-        targetSdk 34
-    }
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }
